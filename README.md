@@ -23,6 +23,7 @@ habit-tracker/
 │       └── habits.css  
 │  
 ├── constants/   # Common constants used across the project
+
 │   └── constants.js  
 │  
 ├── utils/       # Common utility functions  
