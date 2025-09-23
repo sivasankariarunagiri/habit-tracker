@@ -32,4 +32,11 @@ habit-tracker/
 ├── apiServices/ # API service functions  
 │   └── index.js  
 │  
-└── README.md    # Project documentation  
+└── README.md    # Project documentation 
+
+## Deployed Application
+
+You can access the live Habit Tracker Application here:
+[Open Habit Tracker](https://hab-tra.netlify.app/)
+
+
