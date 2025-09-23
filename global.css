@@ -24,6 +24,17 @@ body{
     z-index: 100;
 }
 
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-logo{
+    width: 40px;
+    height: 40px;
+}
+
 .navbar .habit{
     font-size: 2.0rem;
     font-weight: bold;
@@ -33,6 +44,7 @@ body{
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin-left: auto;
 }
 
 .nav-links li a {
@@ -46,6 +58,15 @@ body{
   color: #ffd700;
 }
 
+.menu{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
 .darkmode{
     background: none;
     border: none;
@@ -53,6 +74,10 @@ body{
     cursor: pointer;
     color: #fff;
     margin-left: 1rem;
+}
+
+button:focus, a:focus{
+    outline: none;
 }
 
 .container{
@@ -100,15 +125,6 @@ body{
     background-color: #ffea70;
 }
 
-.btn.login{
-    background-color: #333;
-    color: #fff;
-}
-
-.btn.login:hover{
-    background-color: #555;
-}
-
 .features{
     padding: 4rem 2rem;
     text-align: center;
@@ -151,7 +167,7 @@ body{
 
 .feature p{
     font-size: 1rem;
-    color: #555;
+    color: #888d97;
 }
 
 @keyframes fadeInUp{
@@ -170,22 +186,9 @@ body.dark-mode{
     color: #f0f0f0;
 }
 
-body.dark-mode header{
-    background-color: rgba(20,20,20,0.9);
-}
-
-body.dark-mode .btn.login{
-    background-color: #444;
-    color: #fff;
-}
-
 body.dark-mode .feature{
-    background-color: #1e1e1e;
+    background-color: #3d363636;
     box-shadow: 0 10px 25px rgba(255,255,255,0.05);
-}
-
-body.dark-mode footer{
-    background-color: #1a1a1a;
 }
 
 @media (max-width: 768px){
@@ -200,5 +203,37 @@ body.dark-mode footer{
 
     .container p{
         font-size: 1rem;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        background-color: rgba(102, 113, 126, 0.8);
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+    .nav-links li{
+        margin: 0.5rem 0;
+    }
+
+    /*On mobile - hide Habit Tracker text, show only logo */
+    .habit{
+        display: none;
+    }
+
+    .brand-logo{
+        width: 45px;
+        height: 45px;
     }
 }

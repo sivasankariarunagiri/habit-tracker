@@ -9,14 +9,17 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="habit">Habit Tracker</div>
-            <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Profile</a></li>
-      </ul>
+            <div class="brand">
+                <a href="#">
+                <img src="logo.png" alt="Habit Tracker Logo" class="brand-logo">
+                </a>
+                <span class="habit">Habit Tracker</span>
+            </div>
+        
+            <ul class="nav-links" id="nav-links"></ul>
+
             <button id="darkmode-toggle" class="darkmode">🌙</button>
+            <button id="menu" class="menu">☰</button>
         </nav>
 
         <div class="container">
@@ -24,33 +27,18 @@
             <p>Habit tracker helps you create habits, maintain streaks, and track your progress effortlessly.</p>
 
             <div class="buttons">
-                <a href="#" class="btn register">Register</a>
-                <a href="#" class="btn login">Login</a>
+                <a href="#" class="btn register">Get Started</a>
             </div>
         </div>
     </header>
 
     <section class="features">
         <h2>Features</h2>
-        <div class="feature-cards">
-            <div class="feature">
-                <span class="emoji">🔥</span>
-                <h3>Streaks</h3>
-                <p>Maintain streaks and stay motivated every day.</p>
-            </div>
-            <div class="feature">
-                <span class="emoji">✅</span>
-                <h3>Calendar</h3>
-                <p>Track your habit completion visually using our calendar.</p>
-            </div>
-            <div class="feature">
-                <span class="emoji">🌙</span>
-                <h3>Dark Mode</h3>
-                <p>Switch to dark mode for a comfortable experience at night.</p>
-            </div>
+        <div class="feature-cards" id="feature-cards">
         </div>
     </section>
 
+    <script src="constants/constants.js"></script>
     <script src="index.js"></script>
     
 </body>
