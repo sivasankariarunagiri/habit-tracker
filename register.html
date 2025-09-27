@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Habit Tracker</title>
+  <link rel="stylesheet" href="global.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <a href="index.html">
+          <img src="logo.png" alt="Habit Tracker Logo" class="brand-logo">
+        </a>
+        <span class="habit">Habit Tracker</span>
+      </div>
+      <ul class="nav-links" id="nav-links"></ul>
+      <button id="menu" class="menu" aria-label="Toggle menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <form id="register-form" class="form-card" novalidate>
+      <h1>Create Account</h1>
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Password" required>
+      </div>
+      <button type="submit" class="btn register">Register</button>
+      <p style="margin-top:1rem;">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </main>
+
+  <script src="navbar.js"></script>
+  <script src="register.js"></script>
+</body>
+</html>

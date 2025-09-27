@@ -17,7 +17,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 2rem 2rem;
-    background-color: rgba(39, 63, 90, 0.612);
+    background-color: rgba(24, 47, 72, 0.612);
     color: #fff;
     position: sticky;
     top: 0;
@@ -65,15 +65,16 @@ body{
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
+    margin-left: 1rem;
 }
 
 .darkmode{
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     cursor: pointer;
     color: #fff;
-    margin-left: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 button:focus, a:focus{
@@ -99,6 +100,7 @@ button:focus, a:focus{
     margin-left: auto;
     margin-right: auto;
     animation: fadeInUp 1.2s ease;
+    color: #fff;
 }
 
 .buttons{
@@ -119,6 +121,7 @@ button:focus, a:focus{
 .btn.register{
     background-color: #ffd700;
     color: #333;
+    border: none;
 }
 
 .btn.register:hover{
@@ -141,6 +144,8 @@ button:focus, a:focus{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .feature{
@@ -149,7 +154,7 @@ button:focus, a:focus{
     border-radius: 15px;
     width: 250px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3 ease, background-color 0.5s ease, color 0.5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
 .feature:hover{
@@ -188,7 +193,58 @@ body.dark-mode{
 
 body.dark-mode .feature{
     background-color: #3d363636;
-    box-shadow: 0 10px 25px rgba(255,255,255,0.05);
+    box-shadow: 0 10px 25px rgba(10, 3, 3, 0.295);
+}
+
+body.dark-mode .form-card{
+    background-color: #333333a3;
+    color: #fff;
+}
+
+body.dark-mode .form-card p a{
+    color: #fff;
+}
+
+.form-card{
+    max-width: 400px;
+    margin: 5rem auto;
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease;
+    color: #333;
+}
+.form-card h1{
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.form-group{
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group input{
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.form-group input:focus{
+    border-color: #10171f;
+}
+
+.form-card p a{
+    color: #10171f;
+}
+
+.form-card p a:hover{
+    text-decoration: underline;
 }
 
 @media (max-width: 768px){
@@ -212,19 +268,20 @@ body.dark-mode .feature{
     .nav-links{
         display: none;
         flex-direction: column;
-        background-color: rgba(102, 113, 126, 0.8);
+        background-color: rgba(102, 113, 126, 0.95);
         position: absolute;
         top: 70px;
         right: 10px;
         padding: 1rem;
         border-radius: 8px;
+        z-index: 2000;
     }
 
     .nav-links.active{
         display: flex;
     }
     .nav-links li{
-        margin: 0.5rem 0;
+        margin: 0.8rem 0;
     }
 
     /*On mobile - hide Habit Tracker text, show only logo */
